@@ -16,7 +16,18 @@ const SidePanel = ({ clearRoom, clearUser }) => {
     clearRoom();
     clearUser();
   };
-  return <div></div>;
+
+  return (
+    <div>
+      <button type="button" onClick={onOpenModal}>
+        방만들기
+      </button>
+      <button type="button" onClick={onLogout}>
+        로그아웃
+      </button>
+      <CreateRoomModal />
+    </div>
+  );
 };
 
 SidePanel.propTypes = {

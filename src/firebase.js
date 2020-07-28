@@ -1,7 +1,5 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import 'firebase/database';
-import 'firebase/storage';
 
 // firebase 설정 (프로젝트 설정에 Firebase SDK snippet에 나옴)
 const firebaseConfig = {
@@ -15,4 +13,6 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-export default firebase;
+const Auth = new firebase.auth();
+
+export { Auth };
